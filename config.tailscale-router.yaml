@@ -2,7 +2,7 @@
 # This configuration adds Tailscale routing capabilities to the web container.
 web_extra_daemons:
   - name: tailscale-service
-    command: tailscaled --statedir=${TS_STATE_DIR:-/var/lib/tailscale} --tun=userspace-networking
+    command: "/usr/local/bin/start-tailscaled.sh"
     directory: /usr/sbin
 
 hooks:
